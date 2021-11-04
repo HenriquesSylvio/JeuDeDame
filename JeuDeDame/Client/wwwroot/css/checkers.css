@@ -8,6 +8,10 @@
     border: 1px solid black;
 }
 
+.cell.active{
+    border: 3px solid blue;
+}
+
 .row:nth-child(2n) .cell:nth-child(2n+1) {
     background: tan;
 }

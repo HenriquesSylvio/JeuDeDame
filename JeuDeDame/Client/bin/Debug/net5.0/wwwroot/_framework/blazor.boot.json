@@ -196,12 +196,12 @@
       "netstandard.dll": "sha256-mbIVAluJ7cAx0vUQshB\/c1zEIK5JcYwIYxo\/BQ\/meRU=",
       "System.Private.CoreLib.dll": "sha256-FrZbEyy47f3RDuj77R5oHUGxSGEDgRRxykTjImrLqfM=",
       "JeuDeDame.Shared.dll": "sha256-lp5M19r2CJ6\/+g42iYYn5YS5hZky4VhAJb1G1LneL1U=",
-      "JeuDeDame.Client.dll": "sha256-Kqr0x83rDucr+cVbmVRsN5RXFffo+Jhd+n5IQcu9ww0="
+      "JeuDeDame.Client.dll": "sha256-6JlH3idk3vGOT6etlHexlUEcjM1h5tkf1\/VR\/j\/QLd0="
     },
     "lazyAssembly": null,
     "pdb": {
       "JeuDeDame.Shared.pdb": "sha256-DQdOQT2XSSF76F1buN8ds2S5BAAbS68dd0DzNerwdDg=",
-      "JeuDeDame.Client.pdb": "sha256-K+2VWOMTntabElJeQPhaQUJUieqp0eBAUxOSpWzRhZ4="
+      "JeuDeDame.Client.pdb": "sha256-nFOTao68UrHyHaheB\/Z7f5y6FkD\/508nBZVTacBDuGY="
     },
     "runtime": {
       "dotnet.timezones.blat": "sha256-5ttRwTa4Rar530elwLdfGDeH9I9NX9MPyDl6zLi9uug=",

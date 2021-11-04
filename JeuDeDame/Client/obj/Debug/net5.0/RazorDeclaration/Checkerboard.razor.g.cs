@@ -127,13 +127,28 @@ using JeuDeDame.Client.Data;
                     Color = "white",
                     Column = j,
                     Row = i,
-                    Direction = CheckerDirection.Down
+                    Direction = CheckerDirection.Up
                 });
             }
         }
     }
 
     Checker activeChecker = null;
+    List<int> rowsPossible = new List<int>();
+    List<int> columnsPossible = new List<int>();
+    void EvaluateCheckerSpots()
+    {
+        rowsPossible.Clear();
+        columnsPossible.Clear();
+        if (activeChecker != null)
+        {
+            rowsPossible.Add(activeChecker.Row +
+                (1 * (activeChecker.Direction == CheckerDirection.Down ? 1 : -1)));
+
+            columnsPossible.Add(activeChecker.Column - 1);
+            columnsPossible.Add(activeChecker.Column + 1);
+        }
+    }
 
 #line default
 #line hidden

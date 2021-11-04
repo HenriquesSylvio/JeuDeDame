@@ -28,13 +28,28 @@
                     Color = "white",
                     Column = j,
                     Row = i,
-                    Direction = CheckerDirection.Down
+                    Direction = CheckerDirection.Up
                 });
             }
         }
     }
 
     Checker activeChecker = null;
+    List<int> rowsPossible = new List<int>();
+    List<int> columnsPossible = new List<int>();
+    void EvaluateCheckerSpots()
+    {
+        rowsPossible.Clear();
+        columnsPossible.Clear();
+        if (activeChecker != null)
+        {
+            rowsPossible.Add(activeChecker.Row +
+                (1 * (activeChecker.Direction == CheckerDirection.Down ? 1 : -1)));
+
+            columnsPossible.Add(activeChecker.Column - 1);
+            columnsPossible.Add(activeChecker.Column + 1);
+        }
+    }
 }
 
 @for (int i = 0; i < 8; i++)
@@ -47,10 +62,13 @@
         {
             checker = whiteCheckers.FirstOrDefault(n => n.Column == j && n.Row == i);
         }
-        <div class="cell">
+
+        bool canMoveHere = rowsPossible.Contains(i) && columnsPossible.Contains(j);
+
+        <div class="cell @(canMoveHere ? "active" : "")">
             @if (checker != null)
             {
-                <div @onclick="() => { activeChecker = checker; }" 
+                <div @onclick="() => { activeChecker = checker; EvaluateCheckerSpots(); }" 
                      class="checker @checker.Color @(checker == activeChecker ? "active" : "")"></div>
             }
         </div>
