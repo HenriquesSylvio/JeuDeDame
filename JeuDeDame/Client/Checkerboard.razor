@@ -18,6 +18,20 @@
                 });
             }
         }
+
+        for (int i = 5; i < 8; i++)
+        {
+            for (int j = (i + 1) % 2; j < 8; j += 2)
+            {
+                blackCheckers.Add(new Checker
+                {
+                    Color = "white",
+                    Column = j,
+                    Row = i,
+                    Direction = CheckerDirection.Down
+                });
+            }
+        }
     }
 }
 
@@ -25,8 +39,12 @@
 {
 <div class="row">
     @for (int j = 0; j < 8; j++)
-            {
-                var checker = blackCheckers.FirstOrDefault(n => n.Column == j && n.Row == i);
+    {
+        var checker = blackCheckers.FirstOrDefault(n => n.Column == j && n.Row == i);
+        if (checker == null)
+        {
+            checker = whiteCheckers.FirstOrDefault(n => n.Column == j && n.Row == i);
+        }
         <div class="cell">
             @if (checker != null)
             {

@@ -117,6 +117,20 @@ using JeuDeDame.Client.Data;
                 });
             }
         }
+
+        for (int i = 5; i < 8; i++)
+        {
+            for (int j = (i + 1) % 2; j < 8; j += 2)
+            {
+                blackCheckers.Add(new Checker
+                {
+                    Color = "white",
+                    Column = j,
+                    Row = i,
+                    Direction = CheckerDirection.Down
+                });
+            }
+        }
     }
 
 #line default

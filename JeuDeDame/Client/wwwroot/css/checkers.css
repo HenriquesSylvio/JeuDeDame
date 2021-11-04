@@ -34,3 +34,7 @@
 .checker.black{
     background: #000;
 }
+
+.checker.white {
+    background: #fff;
+}
