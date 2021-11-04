@@ -2,7 +2,6 @@ C:\Users\Henriques Sylvio\source\repos\JeuDeDame\JeuDeDame\Shared\bin\Debug\net5
 C:\Users\Henriques Sylvio\source\repos\JeuDeDame\JeuDeDame\Shared\bin\Debug\net5.0\JeuDeDame.Shared.dll
 C:\Users\Henriques Sylvio\source\repos\JeuDeDame\JeuDeDame\Shared\bin\Debug\net5.0\ref\JeuDeDame.Shared.dll
 C:\Users\Henriques Sylvio\source\repos\JeuDeDame\JeuDeDame\Shared\bin\Debug\net5.0\JeuDeDame.Shared.pdb
-C:\Users\Henriques Sylvio\source\repos\JeuDeDame\JeuDeDame\Shared\obj\Debug\net5.0\JeuDeDame.Shared.csproj.AssemblyReference.cache
 C:\Users\Henriques Sylvio\source\repos\JeuDeDame\JeuDeDame\Shared\obj\Debug\net5.0\JeuDeDame.Shared.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\Henriques Sylvio\source\repos\JeuDeDame\JeuDeDame\Shared\obj\Debug\net5.0\JeuDeDame.Shared.AssemblyInfoInputs.cache
 C:\Users\Henriques Sylvio\source\repos\JeuDeDame\JeuDeDame\Shared\obj\Debug\net5.0\JeuDeDame.Shared.AssemblyInfo.cs

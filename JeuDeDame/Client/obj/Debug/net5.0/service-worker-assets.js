@@ -1,7 +1,7 @@
 ﻿self.assetsManifest = {
   "assets": [
     {
-      "hash": "sha256-FcM3SjX56jim8\/hVE0vFOdSg9\/l+AdhBfya6wJOwWDw=",
+      "hash": "sha256-30bLnAI9mPzpahh0ngXNAL0zIoujxn06XLoTRafdBNE=",
       "url": "_framework\/blazor.boot.json"
     },
     {
@@ -793,11 +793,11 @@
       "url": "_framework\/JeuDeDame.Shared.pdb"
     },
     {
-      "hash": "sha256-LhjLaFfL+45zcKOop5L7zPpQgUgVtiwOTSES06rMd2c=",
+      "hash": "sha256-2BjZO\/azZAaeuTIjZ9i0+RmpOFJWvVeDNmUB\/pL6TSk=",
       "url": "_framework\/JeuDeDame.Client.dll"
     },
     {
-      "hash": "sha256-OmHqMw\/qU9w1dI7ZhDKdoS6l8jkz6gqq\/dNFFWywNCI=",
+      "hash": "sha256-seDPzssiY227j0lw7wyxv7GuhFvitanx7dx7xQQ\/p2k=",
       "url": "_framework\/JeuDeDame.Client.pdb"
     },
     {
@@ -1601,6 +1601,10 @@
       "url": "css\/bootstrap\/bootstrap.min.css.map"
     },
     {
+      "hash": "sha256-3JZT5vsCVWUPrNCNbOD\/9MfJtiGUCXUWyDojDIGdP8k=",
+      "url": "css\/checkers.css"
+    },
+    {
       "hash": "sha256-jA4J4h\/k76zVxbFKEaWwFKJccmO0voOQ1DbUW+5YNlI=",
       "url": "css\/open-iconic\/FONT-LICENSE"
     },
@@ -1645,7 +1649,7 @@
       "url": "icon-512.png"
     },
     {
-      "hash": "sha256-GfEteWBvjRPmlhkRZcsDCXamOgVsAlSCHKP+028XXnA=",
+      "hash": "sha256-wydt+MjIGKt2qpSsUb89knS7tt4qPnwmz5nGYawPW9Q=",
       "url": "index.html"
     },
     {
@@ -1661,5 +1665,5 @@
       "url": "JeuDeDame.Client.bundle.scp.css"
     }
   ],
-  "version": "fwWiKxnz"
+  "version": "6i7IhlRH"
 };
