@@ -133,6 +133,8 @@ using JeuDeDame.Client.Data;
         }
     }
 
+    Checker activeChecker = null;
+
 #line default
 #line hidden
 #nullable disable
