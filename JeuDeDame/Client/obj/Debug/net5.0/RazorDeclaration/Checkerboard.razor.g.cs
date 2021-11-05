@@ -150,6 +150,18 @@ using JeuDeDame.Client.Data;
         }
     }
 
+    void MoveChecker(int row, int column)
+    {
+
+        bool canMoveHere = rowsPossible.Contains(row) && columnsPossible.Contains(column);
+        if (!canMoveHere)
+            return;
+        activeChecker.Column = column;
+        activeChecker.Row = row;
+        activeChecker = null;
+        EvaluateCheckerSpots();
+    }
+
 #line default
 #line hidden
 #nullable disable

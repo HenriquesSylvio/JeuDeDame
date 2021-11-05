@@ -50,13 +50,27 @@
             columnsPossible.Add(activeChecker.Column + 1);
         }
     }
+
+    void MoveChecker(int row, int column)
+    {
+
+        bool canMoveHere = rowsPossible.Contains(row) && columnsPossible.Contains(column);
+        if (!canMoveHere)
+            return;
+        activeChecker.Column = column;
+        activeChecker.Row = row;
+        activeChecker = null;
+        EvaluateCheckerSpots();
+    }
 }
 
 @for (int i = 0; i < 8; i++)
 {
-<div class="row">
+    int localI = i;
+    <div class="row">
     @for (int j = 0; j < 8; j++)
     {
+        int localJ = j;
         var checker = blackCheckers.FirstOrDefault(n => n.Column == j && n.Row == i);
         if (checker == null)
         {
@@ -65,7 +79,7 @@
 
         bool canMoveHere = rowsPossible.Contains(i) && columnsPossible.Contains(j);
 
-        <div class="cell @(canMoveHere ? "active" : "")">
+        <div @onclick="() => MoveChecker(localI, localJ)" class="cell @(canMoveHere ? "active" : "")">
             @if (checker != null)
             {
                 <div @onclick="() => { activeChecker = checker; EvaluateCheckerSpots(); }" 
@@ -73,5 +87,5 @@
             }
         </div>
     }
-</div>
+    </div>
 } 
