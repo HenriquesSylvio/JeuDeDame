@@ -1,7 +1,7 @@
 ﻿self.assetsManifest = {
   "assets": [
     {
-      "hash": "sha256-B\/WqqwR0yEfvDbZerKGYh18joM7wLV89++EFOHcvzPk=",
+      "hash": "sha256-iOZbmSqXr7Ty\/6a3DRX4pKewN0AmnqNmgbifsXJK+h0=",
       "url": "_framework\/blazor.boot.json"
     },
     {
@@ -793,11 +793,11 @@
       "url": "_framework\/JeuDeDame.Shared.pdb"
     },
     {
-      "hash": "sha256-TaKFNHjesjmi216Z9OwESyeVeufe8a6b9iYvIEbbZVY=",
+      "hash": "sha256-KDRVO7F7pzIwc+9Q4AyXa2R8OvmRFIWetVU97WkEFuE=",
       "url": "_framework\/JeuDeDame.Client.dll"
     },
     {
-      "hash": "sha256-GIjyqH5Q4AERvO17pJ0Ens6zoTWMHKD8w4vghQk9604=",
+      "hash": "sha256-xjEU7NI+BYLp31vUJd+OG1AnRLNRPyPChKU0rHPU+Zo=",
       "url": "_framework\/JeuDeDame.Client.pdb"
     },
     {
@@ -1601,7 +1601,7 @@
       "url": "css\/bootstrap\/bootstrap.min.css.map"
     },
     {
-      "hash": "sha256-a4TeobDuv4b06CR\/4QVr1xCt63OAwZ64OJQU\/aAeRyo=",
+      "hash": "sha256-\/KzZqDcgKcviS1pQ0xtrvdkr1bWjR5+K9LLD44XV8aY=",
       "url": "css\/checkers.css"
     },
     {
@@ -1665,5 +1665,5 @@
       "url": "JeuDeDame.Client.bundle.scp.css"
     }
   ],
-  "version": "ZnwUgQ90"
+  "version": "GZPT\/XbE"
 };

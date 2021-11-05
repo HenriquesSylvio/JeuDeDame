@@ -122,7 +122,7 @@ using JeuDeDame.Client.Data;
         {
             for (int j = (i + 1) % 2; j < 8; j += 2)
             {
-                blackCheckers.Add(new Checker
+                whiteCheckers.Add(new Checker
                 {
                     Color = "white",
                     Column = j,
@@ -134,30 +134,63 @@ using JeuDeDame.Client.Data;
     }
 
     Checker activeChecker = null;
-    List<int> rowsPossible = new List<int>();
-    List<int> columnsPossible = new List<int>();
+    List<(int row, int column)> cellsPossible = new();
     void EvaluateCheckerSpots()
     {
-        rowsPossible.Clear();
-        columnsPossible.Clear();
+        cellsPossible.Clear();
         if (activeChecker != null)
         {
-            rowsPossible.Add(activeChecker.Row +
-                (1 * (activeChecker.Direction == CheckerDirection.Down ? 1 : -1)));
+            List<int> rowsPossible = new List<int>();
+            if(activeChecker.Direction == CheckerDirection.Down ||
+                    activeChecker.Direction == CheckerDirection.Both)
+            {
+                rowsPossible.Add(activeChecker.Row + 1);
+            }
+            if (activeChecker.Direction == CheckerDirection.Up ||
+                    activeChecker.Direction == CheckerDirection.Both)
+            {
+                rowsPossible.Add(activeChecker.Row - 1);
+            }
 
-            columnsPossible.Add(activeChecker.Column - 1);
-            columnsPossible.Add(activeChecker.Column + 1);
+            foreach (var row in rowsPossible)
+            {
+                EvaluateSpot(row, activeChecker.Column - 1);
+                EvaluateSpot(row, activeChecker.Column + 1);
+            }
+        }
+    }
+
+    void EvaluateSpot(int row, int column)
+    {
+        var blackChecker = blackCheckers.FirstOrDefault(
+            n => n.Column == column && n.Row == row);
+        var whiteChecker = whiteCheckers.FirstOrDefault(
+            n => n.Column == column && n.Row == row);
+
+        if(blackChecker == null && whiteChecker == null)
+        {
+            cellsPossible.Add((row, column));
         }
     }
 
     void MoveChecker(int row, int column)
     {
 
-        bool canMoveHere = rowsPossible.Contains(row) && columnsPossible.Contains(column);
+        bool canMoveHere = cellsPossible.Contains((row, column));
         if (!canMoveHere)
             return;
         activeChecker.Column = column;
         activeChecker.Row = row;
+
+        if (activeChecker.Row == 0 && activeChecker.Color == "white")
+        {
+            activeChecker.Direction = CheckerDirection.Both;
+        }
+        if (activeChecker.Row == 7 && activeChecker.Color == "black")
+        {
+            activeChecker.Direction = CheckerDirection.Both;
+        }
+
         activeChecker = null;
         EvaluateCheckerSpots();
     }
