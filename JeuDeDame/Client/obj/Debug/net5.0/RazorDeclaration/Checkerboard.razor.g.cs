@@ -175,7 +175,6 @@ using JeuDeDame.Client.Data;
 
     void MoveChecker(int row, int column)
     {
-
         bool canMoveHere = cellsPossible.Contains((row, column));
         if (!canMoveHere)
             return;
@@ -192,8 +191,21 @@ using JeuDeDame.Client.Data;
         }
 
         activeChecker = null;
+        whiteTurn = !whiteTurn;
         EvaluateCheckerSpots();
     }
+
+    void CheckerClicked(Checker checker)
+    {
+        if (whiteTurn && checker.Color == "black")
+            return;
+        if (!whiteTurn && checker.Color == "white")
+            return;
+        activeChecker = checker;
+        EvaluateCheckerSpots();
+    }
+
+    bool whiteTurn = true;
 
 #line default
 #line hidden

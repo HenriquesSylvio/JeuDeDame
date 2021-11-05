@@ -76,7 +76,6 @@
 
     void MoveChecker(int row, int column)
     {
-
         bool canMoveHere = cellsPossible.Contains((row, column));
         if (!canMoveHere)
             return;
@@ -93,8 +92,21 @@
         }
 
         activeChecker = null;
+        whiteTurn = !whiteTurn;
         EvaluateCheckerSpots();
     }
+
+    void CheckerClicked(Checker checker)
+    {
+        if (whiteTurn && checker.Color == "black")
+            return;
+        if (!whiteTurn && checker.Color == "white")
+            return;
+        activeChecker = checker;
+        EvaluateCheckerSpots();
+    }
+
+    bool whiteTurn = true;
 }
 
 @for (int i = 0; i < 8; i++)
@@ -115,7 +127,7 @@
         <div @onclick="() => MoveChecker(localI, localJ)" class="cell @(canMoveHere ? "active" : "")">
             @if (checker != null)
             {
-                <div @onclick="() => { activeChecker = checker; EvaluateCheckerSpots(); }" 
+                <div @onclick="() => CheckerClicked(checker)" 
                      class="checker @checker.Color @(checker == activeChecker ? "active" : "")">
                     <span>@(checker.Direction == CheckerDirection.Both ? "K" : "")</span>
                 </div>

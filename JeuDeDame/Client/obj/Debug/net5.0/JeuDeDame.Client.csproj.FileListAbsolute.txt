@@ -635,4 +635,3 @@ C:\Users\Henriques Sylvio\source\repos\JeuDeDame\JeuDeDame\Client\obj\Debug\net5
 C:\Users\Henriques Sylvio\source\repos\JeuDeDame\JeuDeDame\Client\obj\Debug\net5.0\service-worker-assets.js
 C:\Users\Henriques Sylvio\source\repos\JeuDeDame\JeuDeDame\Client\obj\Debug\net5.0\RazorDeclaration\Checkerboard.razor.g.cs
 C:\Users\Henriques Sylvio\source\repos\JeuDeDame\JeuDeDame\Client\obj\Debug\net5.0\Razor\Checkerboard.razor.g.cs
-C:\Users\Henriques Sylvio\source\repos\JeuDeDame\JeuDeDame\Client\obj\Debug\net5.0\JeuDeDame.Client.csproj.CopyComplete
